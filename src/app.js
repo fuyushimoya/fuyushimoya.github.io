@@ -1,4 +1,20 @@
-'use strict';
+import React from 'react';
+import {render} from 'react-dom';
+import {Provider} from 'react-redux';
 
-const a = 'world';
-console.log(`Hello ${a}`);
+import createStore from './store';
+
+// Todo
+import TodoReducer from './Todos/Reducer';
+import TodoApp from './Todos/TodoApp';
+
+let store = createStore(TodoReducer);
+
+let rootElement = document.getElementById('app-entry');
+
+render(
+  <Provider store={store}>
+    <TodoApp />
+  </Provider>,
+  rootElement
+);
