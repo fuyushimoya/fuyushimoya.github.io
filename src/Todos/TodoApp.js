@@ -47,7 +47,7 @@ class TodoApp extends Component {
     const { dispatch, visibleTodos, visibilityFilter } = this.props;
     return (
       <section>
-        <h2 className='hidden-heading'>Todo List</h2>
+        <h2 className='visually-hidden'>Todo List</h2>
         <AddTodo 
           onAddClick={(text) => this._addTodo(text)}
         />

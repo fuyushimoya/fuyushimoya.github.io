@@ -9,6 +9,10 @@ export default {
         test: /\.jsx?$/,            // target: *.js(x)
         exclude: /(node_modules)/,  // exclude npm modules.
         loader: 'babel'
+      }, 
+      {
+        test: /\.scss$/,
+        loader: 'style!css!sass'
       }
     ]
   }

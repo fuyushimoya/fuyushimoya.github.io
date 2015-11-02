@@ -1,20 +1,20 @@
 import React from 'react';
 import {render} from 'react-dom';
 import {Provider} from 'react-redux';
+import {Router, Route, Link} from 'react-router';
 
-import createStore from './store';
+import routeConfig from './routeConfig';
+
+//import createStore from './store';
 
 // Todo
-import TodoReducer from './Todos/Reducer';
-import TodoApp from './Todos/TodoApp';
+// import TodoReducer from './Todos/Reducer';
+// import TodoApp from './Todos/TodoApp';
 
-let store = createStore(TodoReducer);
-
+// let store = createStore(TodoReducer);
 let rootElement = document.getElementById('app-entry');
 
 render(
-  <Provider store={store}>
-    <TodoApp />
-  </Provider>,
+  routeConfig,
   rootElement
 );

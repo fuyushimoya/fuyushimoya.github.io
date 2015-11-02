@@ -13,7 +13,7 @@ export function createActionSet(actions, namespace = null) {
         const result = func(...args);
         // For redux-thunk.
         if (Object.prototype.toString.call(result) === '[object Function]') {
-          return ((...innerArgs)) => {
+          return ((...innerArgs) => {
             return result(...innerArgs);
           });
         } else {
